@@ -1,0 +1,90 @@
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/backgrounds.css ***!
+  \***************************************************************************/
+html{
+    background-image: url(0053f91466b237c7ea79.jpg);
+}
+
+body{
+    background-image: url(c7d0076731b1cd7f67d0.jpg);
+}
+
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/progressBar.css ***!
+  \***************************************************************************/
+progress{
+    height: 20px; 
+    position: relative;
+    background: #555;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+
+}
+
+#start{
+    height: 20px; 
+    position: relative;
+    background: #555;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
+  \*********************************************************************/
+
+
+@font-face{
+    font-family: startText;
+    src: url(f594048aca20b45e11de.ttf);
+}
+
+h1 {
+    font-family: startText;
+}
+
+hr {
+    border-top: 3px dotted white;
+}
+
+
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/text.css ***!
+  \********************************************************************/
+@font-face{
+    font-family: startText;
+    src: url(f594048aca20b45e11de.ttf) format ("ttf"); 
+}
+
+
+p{
+    color: white;
+}
+
+b:hover{
+    color: white;
+}
+
+a:visited{
+    color:gray;
+}
+
+a:link{
+    color:#004ba0;
+}
+
+h1{
+    font-family: startText;
+    color: white;
+}
+
+
+
+
+hr {
+    border-top: 3px dotted whitesmoke;
+}
+
+

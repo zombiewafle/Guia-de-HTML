@@ -1,0 +1,184 @@
+body{
+    background: black;
+}
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 621px;
+    height: 600px;
+    display:flex;
+    align-items: center;
+    padding: 100px;
+  }
+    .arrow:first-child{
+    width: 0; 
+    height: 0; 
+    border-top: 110px solid transparent;
+    border-bottom: 110px solid transparent;
+    border-left: 300px solid #AE0002;
+    margin-right: 20px;
+  }
+  
+    .arrow:nth-child(2) {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    left: 648px;
+    bottom: 37px;
+    border-bottom: 300px solid #AE0002;
+    position: absolute;
+  }
+  .arrow:nth-child(3) {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    position: absolute;
+    left: 648px;
+    bottom: 355px;
+    border-top: 300px solid #AE0002;
+  }
+  .circulo::before{
+    content: "";
+    width: 150px;
+    height: 280px;
+    background-color: black; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100% 0% 0% 100% / 50% 0% 100% 50% ;
+    transform: translate3d(1017px,268px ,0);
+  }
+  .circulo::after{
+    content: "";
+    width: 150px;
+    height: 280px;
+    background-color: black; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0% 100% 100% 0% / 100% 50% 50% 0% ;
+    transform: translate3d(352px,268px ,0);
+  }
+    .arrow:nth-child(4){
+    width: 0; 
+    height: 0; 
+    border-top: 110px solid transparent;
+    border-bottom: 110px solid transparent;
+    
+    border-right: 300px solid #AE0002;
+  }
+  .circulo2::before{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%  ;
+    transform: translate3d(618px,5px ,0);
+  }
+  .circulo2::after{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%  ;
+    transform: translate3d(618px,663px ,0);
+  }
+    .arrow:nth-child(5) {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    left: 532px;
+    bottom: 81px;
+    border-bottom: 300px solid #ffffff;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+    .arrow:nth-child(6) {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    left: 766px;
+    bottom: 81px;
+    border-bottom: 300px solid #ffffff;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .arrow:nth-child(7) {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    position: absolute;
+    left: 766px;
+    bottom: 311px;
+    border-top: 300px solid #ffffff;
+    transform: rotate(45deg);
+  }
+  .arrow:last-child {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    position: absolute;
+    left: 532px;
+    bottom: 311px;
+    border-top: 300px solid #ffffff;
+    transform: rotate(-45deg);
+  }
+  .circulo3{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 383px;
+    top: 101px;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%  ;
+    transform: rotate(-45deg);
+  }
+  .circulo4{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 855px;
+    top: 101px;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%  ;
+    transform: rotate(45deg);
+  }
+  .circulo5{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 855px;
+    top: 563px;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%  ;
+    transform: rotate(-225deg);
+  }
+  .circulo6{
+    content: "";
+    width: 280px;
+    height: 150px;
+    background-color: black; 
+    position: absolute;
+    left: 383px;
+    top: 563px;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%  ;
+    transform: rotate(225deg);
+  }

@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+
+nav{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: right;
+    background-color: gray;
+}
+
+ul li{
+    padding: 5px;
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+ul li a:visited{
+    color: white;
+}
+
+ul li a:visited:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+#body-site{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 30px;
+    background-color: rgb(155, 153, 153);
+    height: fit-content;
+}
+
+#body-site img{
+    padding: 4px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+#body-site img:hover{
+    background-color: aliceblue;
+    opacity: 30%;
+}

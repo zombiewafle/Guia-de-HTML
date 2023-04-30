@@ -1,0 +1,57 @@
+.logo{
+    width: fit-content;
+}
+
+#second-row{
+    position: relative;
+    left: 85px;
+    top: 100px;
+    z-index: 1;
+}
+
+#first-row{
+    z-index: 2;
+    position: absolute;
+}
+
+
+#blue{
+    width: 150px;
+    height: 150px;
+    border: 10px solid blue;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#yellow{
+    width: 150px;
+    height: 150px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+#black{
+    width: 150px;
+    height: 150px;
+    border: 10px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#green{
+    width: 150px;
+    height: 150px;
+    border: 10px solid green;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#red{
+    width: 150px;
+    height: 150px;
+    border: 10px solid red;
+    border-radius: 50%;
+    display: inline-block;
+}

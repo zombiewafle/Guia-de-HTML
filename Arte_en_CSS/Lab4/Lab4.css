@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.base{
+    width: 60vmin;
+    height: 60vmin;
+    left: 50%;
+    top: 50%;
+    background-color: #202038;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.circulo{
+    width: 55vmin;
+    height: 55vmin;
+    left: 50%;
+    top: 50%;
+    background-color: #F8F800;
+    background-image: linear-gradient(to bottom right, #F8F800, #F8F800,#F99000, #F84800, #F84800, #F99000, #F8F800, #F8F800);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circulo2{
+    width: 19.5vmin;
+    height: 32vmin;
+    left: 50%;
+    top: 50%;
+    background-color: #202038;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.triangle1d{
+    width: 0;
+    height: 0;
+    border-top: 335px solid #010088;
+    border-right: 127px solid transparent;
+    transform: rotate(227.1deg);
+    position: absolute;
+    left: 44.7%;
+    bottom: 53%;
+}
+
+.triangle2d{
+    width: 0;
+    height: 0;
+    border-top: 146px solid #010088;
+    border-left: 146px solid transparent;
+    transform: rotate(44deg);
+    position: absolute;
+    left: 6.1%;
+    bottom: 36.4%;
+}
+
+.triangle3d{
+    width: 0;
+    height: 0;
+    border-left: 36px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 95.5px solid #010088;
+    transform: rotate(27.9deg);
+    position: absolute;
+    left: 26.9%;
+    bottom: 27.7%;
+}
+
+.rectangulo1d{
+    width: 69px;
+    height: 239px;
+    background-color: #010088;
+    transform: rotate(49deg);
+    position: absolute;
+    left: 41%;
+    bottom: 23.1%;
+}
+
+.triangle4d{
+    width: 0;
+    height: 0;
+    border-top: 328px solid #010088;
+    border-right: 129px solid transparent;
+    transform: rotate(408.4deg);
+    position: absolute;
+    left: 25.5%;
+    bottom: -24.4%;
+}
+
+.triangle5d{
+    width: 0;
+    height: 0;
+    border-top: 148px solid #010088;
+    border-left: 141px solid transparent;
+    transform: rotate(222deg);
+    position: absolute;
+    left: 59.5%;
+    bottom: 31%;
+}
+
+.triangle6d{
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 95.5px solid #010088;
+    transform: rotate(203deg);
+    position: absolute;
+    left: 59%;
+    bottom: 50.8%;
+}
+
+.triangle1c{
+    width: 0;
+    height: 0;
+    border-top: 324px solid #0260EF;
+    border-right: 117px solid transparent;
+    transform: rotate(227.4deg);
+    position: absolute;
+    left: 45%;
+    bottom: 53%;
+}
+
+.triangle2c{
+    width: 0;
+    height: 0;
+    border-top: 133px solid #0260EF;
+    border-left: 139px solid transparent;
+    transform: rotate(45.3deg);
+    position: absolute;
+    left: 7.75%;
+    bottom: 38.5%;
+}
+
+.triangle3c{
+    width: 0;
+    height: 0;
+    border-left: 31px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 95.5px solid #0260EF;
+    transform: rotate(27.9deg);
+    position: absolute;
+    left: 27.3%;
+    bottom: 28.7%;
+}
+
+.rectangulo1c{
+    width: 60px;
+    height: 239px;
+    background-color: #0260EF;
+    transform: rotate(49deg);
+    position: absolute;
+    left: 42%;
+    bottom: 23.1%;
+}
+
+.triangle4c{
+    width: 0;
+    height: 0;
+    border-top: 324px solid #0260EF;
+    border-right: 117px solid transparent;
+    transform: rotate(408.8deg);
+    position: absolute;
+    left: 27.5%;
+    bottom: -22.4%;
+}
+
+.triangle5c{
+    width: 0;
+    height: 0;
+    border-top: 133px solid #0260EF;
+    border-left: 136px solid transparent;
+    transform: rotate(224.3deg);
+    position: absolute;
+    left: 59%;
+    bottom: 32.5%;
+}
+
+.triangle6c{
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 107.5px solid #0260EF;
+    transform: rotate(202deg);
+    position: absolute;
+    left: 59.3%;
+    bottom: 46.9%;
+}
+
+.triangle1b{
+    width: 0;
+    height: 0;
+    border-top: 312px solid #01C5F3;
+    border-right: 109px solid transparent;
+    transform: rotate(227.6deg);
+    position: absolute;
+    left: 45%;
+    bottom: 53%;
+}
+
+.triangle2b{
+    width: 0;
+    height: 0;
+    border-top: 123px solid #01C5F3;
+    border-left: 132px solid transparent;
+    transform: rotate(46.3deg);
+    position: absolute;
+    left: 9.15%;
+    bottom: 39.7%;
+}
+
+.triangle3b{
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 120.5px solid #01C5F3;
+    transform: rotate(29.4deg);
+    position: absolute;
+    left: 29.9%;
+    bottom: 29.3%;
+}
+
+.rectangulo1b{
+    width: 50px;
+    height: 231px;
+    background-color: #01C5F3;
+    transform: rotate(49deg);
+    position: absolute;
+    left: 43%;
+    bottom: 24.1%;
+}
+
+.triangle4b{
+    width: 0;
+    height: 0;
+    border-top: 312px solid #01C5F3;
+    border-right: 109px solid transparent;
+    transform: rotate(409deg);
+    position: absolute;
+    left: 28.6%;
+    bottom: -20.5%;
+}
+
+.triangle5b{
+    width: 0;
+    height: 0;
+    border-top: 123px solid #01C5F3;
+    border-left: 132px solid transparent;
+    transform: rotate(225.9deg);
+    position: absolute;
+    left: 58.7%;
+    bottom: 33.5%;
+}
+
+.triangle6b{
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 107.5px solid #01C5F3;
+    transform: rotate(202deg);
+    position: absolute;
+    left: 59.3%;
+    bottom: 45.9%;
+}
+
+.triangle1{
+    width: 0;
+    height: 0;
+    border-top: 300px solid #F8F800;
+    border-right: 100px solid transparent;
+    transform: rotate(228deg);
+    position: absolute;
+    left: 45%;
+    bottom: 53%;
+}
+
+.triangle2{
+    width: 0;
+    height: 0;
+    border-top: 115px solid #F8F800;
+    border-left: 132px solid transparent;
+    transform: rotate(48deg);
+    position: absolute;
+    left: 9.9%;
+    bottom: 40.2%;
+}
+
+.triangle3{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 107.5px solid #F8F800;
+    transform: rotate(28deg);
+    position: absolute;
+    left: 30.1%;
+    bottom: 30.2%;
+}
+
+.triangle4{
+    width: 0;
+    height: 0;
+    border-top: 300px solid #F8F800;
+    border-right: 100px solid transparent;
+    transform: rotate(409.3deg);
+    position: absolute;
+    left: 29.6%;
+    bottom: -18.5%;
+}
+
+.triangle5{
+    width: 0;
+    height: 0;
+    border-top: 115px solid #F8F800;
+    border-left: 132px solid transparent;
+    transform: rotate(228deg);
+    position: absolute;
+    left: 57.9%;
+    bottom: 34.2%;
+}
+
+.triangle6{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 107.5px solid #F8F800;
+    transform: rotate(202deg);
+    position: absolute;
+    left: 59.3%;
+    bottom: 44.9%;
+}
+
+.triangle7{
+    width: 0;
+    height: 0;
+    border-top: 97px solid black;
+    border-left: 47px solid transparent;
+    transform: rotate(46deg);
+    position: absolute;
+    left: 33.7%;
+    bottom: 34.3%;
+}
+
+.rectangulo1{
+    width: 42px;
+    height: 222px;
+    background-color: #F8F800;
+    transform: rotate(49deg);
+    position: absolute;
+    left: 44%;
+    bottom: 25%;
+}
+
+.barra1{
+    width: 252px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(89deg);
+    position: absolute;
+    left: -6.7%;
+    bottom: 57.1%;
+}
+
+.barra2{
+    width: 156px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(28deg);
+    position: absolute;
+    left: 1%;
+    bottom: 32%;
+}
+
+.barra3{
+    width: 96px;
+    height: 10px;
+    background-color: #202038;
+    transform: rotate(138.5deg);
+    position: absolute;
+    left: 14.9%;
+    bottom: 18.6%;
+}
+
+.barra4{
+    width: 232px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(157.8deg);
+    position: absolute;
+    left: 19%;
+    bottom: 84.3%;
+}
+
+.barra5{
+    width: 272px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(88.4deg);
+    position: absolute;
+    left: 46.4%;
+    bottom: 38.1%;
+}
+
+.barra6{
+    width: 151px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(23deg);
+    position: absolute;
+    left: 64%;
+    bottom: 66.05%;
+}
+
+.barra7{
+    width: 78px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(137.3deg);
+    position: absolute;
+    left: 63%;
+    bottom: 79.9%;
+}
+
+.barra8{
+    width: 232px;
+    height: 11px;
+    background-color: #202038;
+    transform: rotate(158.8deg);
+    position: absolute;
+    left: 28%;
+    bottom: 15%;
+}
+
+.circulito1{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 28%;
+    bottom: 15%;
+    border-radius: 50%;
+}
+
+.circulito1{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 24%;
+    bottom: 23%;
+    border-radius: 50%;
+}
+
+.circulito2{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 71.9%;
+    bottom: 18.5%;
+    border-radius: 50%;
+}
+
+.circulito3{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 78%;
+    bottom: 61%;
+    border-radius: 50%;
+}
+
+.circulito5{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 16.5%;
+    bottom: 36%;
+    border-radius: 50%;
+}
+
+.circulito6{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 22.5%;
+    bottom: 79%;
+    border-radius: 50%;
+}
+
+.circulito4{
+    width: 15px;
+    height: 15px;
+    background-color: #202038;
+    position: absolute;
+    left: 70%;
+    bottom: 73%;
+    border-radius: 50%;
+}

@@ -1,0 +1,49 @@
+body{
+    flex-wrap: wrap;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    height: 99%;
+    justify-content: space-around;
+
+}
+
+header{
+    display: inline-block;
+    height: 3.5rem;
+    justify-content: center;
+    text-align: center;
+    padding-left: 1355px;
+}
+
+ul *{
+    justify-content: center;
+    list-style-type: none;
+    display: inline;
+    padding: 0.3rem;
+}
+
+ul li a:link{
+    color: black;
+    text-decoration: none;
+}
+
+ul li a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#imagenes{
+    display: flex;
+}
+
+footer{
+    justify-content: end;
+}

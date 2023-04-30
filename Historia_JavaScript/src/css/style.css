@@ -1,0 +1,15 @@
+
+
+@font-face{
+    font-family: startText;
+    src: url(../../assets/Font.ttf);
+}
+
+h1 {
+    font-family: startText;
+}
+
+hr {
+    border-top: 3px dotted white;
+}
+

@@ -1,0 +1,32 @@
+@font-face{
+    font-family: startText;
+    src: url(../../assets/Font.ttf);
+}
+
+
+p{
+    color: white;
+}
+
+b:hover{
+    color: white;
+}
+
+a:visited{
+    color:gray;
+}
+
+a:link{
+    color:#004ba0;
+}
+
+h1{
+    font-family: startText;
+    color: white;
+}
+
+
+hr {
+    border-top: 3px dotted whitesmoke;
+}
+

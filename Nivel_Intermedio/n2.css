@@ -1,0 +1,104 @@
+body{
+    background-color: black;
+}
+
+nav{
+    width: 90vw;
+    margin: 0 auto;
+    text-align: right;
+    background-color: gray;
+    animation: slideDown 1s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+ul li{
+    padding: 5px;
+    display: inline-block;
+    animation: slideRight 1s;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+ul li a:hover{
+    color: blue;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+ul li a:visited{
+    color: white;
+}
+
+ul li a:visited:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+#body-site{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 30px;
+    background-color: rgb(155, 153, 153);
+    height: fit-content;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#body-site img{
+    padding: 4px;
+    margin-top: 10px;
+    border-radius: 50px;
+
+}
+
+#body-site img:hover{
+    background-color: aliceblue;
+    opacity: 30%;
+    animation: pulse 0.7s ease;
+    /* padding: 6px ; */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

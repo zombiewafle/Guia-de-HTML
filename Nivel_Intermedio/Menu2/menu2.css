@@ -1,0 +1,100 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 9999;
+  color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  margin-top: 80px; /* adjust this value according to the header height */
+}
+
+h1 {
+  padding: 10px;
+  margin: 10;
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  padding: 10px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #edbe00;
+  text-decoration: underline;
+}
+
+nav .dropdown {
+  position: relative;
+}
+
+nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;;
+}
+
+nav .dropdown-menu li {
+  margin: 10px 0;
+  width:max-content;
+}
+
+/* nav .dropdown-menu li a{
+    display: block;
+} */
+
+#content {
+  padding: 1.5%;
+  margin-top: 120px; /* adjust this value according to the header height */
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #D9D9D9;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#A {
+  text-align: left;
+  float: left; /* Add this line to float #A to the left */
+}
+
+#B {
+  text-align: right;
+  float: right; /* Add this line to float #B to the right */
+}
+
+#A,
+#B {
+  width: 50%;
+}

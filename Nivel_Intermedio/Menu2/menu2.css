@@ -9,7 +9,7 @@ header {
 }
 
 main {
-  margin-top: 80px; /* adjust this value according to the header height */
+  margin-top: 80px;
 }
 
 h1 {
@@ -32,6 +32,7 @@ nav li {
 nav a {
   color: #ffffff;
   text-decoration: none;
+  transition: color 0.3s ease-in-out; 
 }
 
 nav a:hover {
@@ -45,6 +46,7 @@ nav .dropdown {
 
 nav .dropdown:hover .dropdown-menu {
   display: block;
+  max-height: 200px;
 }
 
 nav .dropdown-menu {
@@ -54,6 +56,10 @@ nav .dropdown-menu {
   left: 0;
   background-color: #333;
   padding: 10px;;
+  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; 
 }
 
 nav .dropdown-menu li {
@@ -67,10 +73,23 @@ nav .dropdown-menu li {
 
 #content {
   padding: 1.5%;
-  margin-top: 120px; /* adjust this value according to the header height */
+  margin-top: 120px; 
   padding-left: 100px;
   padding-right: 100px;
   background-color: #D9D9D9;
+}
+
+#content img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards 0.2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
@@ -84,14 +103,24 @@ footer {
   text-align: center;
 }
 
+footer p {
+  transition: all 0.3s ease-in-out;
+}
+
+footer p:hover {
+  color: #edbe00;
+  font-size: 1.2em;
+}
+
+
 #A {
   text-align: left;
-  float: left; /* Add this line to float #A to the left */
+  float: left;
 }
 
 #B {
   text-align: right;
-  float: right; /* Add this line to float #B to the right */
+  float: right; 
 }
 
 #A,

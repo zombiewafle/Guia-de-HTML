@@ -1,85 +1,91 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-function Login() { // No es asíncrono
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState(''); // Estado para manejar mensajes de error
-    const navigate = useNavigate(); // Hook para la navegación
-  
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
+    const { t } = useTranslation(); // Hook para acceder a traducciones
+
     const handleLogin = async (event) => {
         event.preventDefault();
-  
-        // Validar campos vacíos
+
         if (!email || !password) {
-            setErrorMessage('Por favor, completa todos los campos.');
+            setErrorMessage(t('login.errorMessages.fillFields'));
             return;
         }
-    
+
         try {
             const response = await fetch('/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
             });
-      
+
             if (!response.ok) {
                 const errorData = await response.json();
-                console.error('Respuesta del servidor:', errorData);
-        
-                // Mostrar mensaje de error actualizado
                 if (errorData.message === 'Invalid user') {
-                    setErrorMessage('Usuario inexistente.');
+                    setErrorMessage(t('login.errorMessages.userNotFound'));
                 } else if (errorData.message === 'Invalid password') {
-                    setErrorMessage('Contraseña incorrecta.');
+                    setErrorMessage(t('login.errorMessages.wrongPassword'));
                 } else {
-                    setErrorMessage('Error de inicio de sesión: ' + errorData.message);
+                    setErrorMessage(t('login.errorMessages.unexpectedError'));
                 }
                 return;
             }
-      
+
             const data = await response.json();
-            localStorage.setItem('token', data.token); // Guarda el token recibido en localStorage
-            console.log('Inicio de sesión exitoso:', data);
-            navigate('/sessions'); // Navega a las sesiones tras un inicio de sesión exitoso
+            localStorage.setItem('token', data.token);
+            navigate('/sessions');
         } catch (error) {
-            console.error('Error de inicio de sesión:', error);
-            setErrorMessage('Error de inicio de sesión: Ocurrió un error inesperado.');
+            setErrorMessage(t('login.errorMessages.unexpectedError'));
         }
+    };
+
+    const handleGoogleLogin = () => {
+        window.location.href = 'http://localhost:3000/auth/google';
     };
 
     return (
         <div>
-            <header title="Iniciar Sesión" />
-            <div className='container' id='container'>
-                <div className='form-container sign-in'>
+            <header title={t('login.title')} />
+            <div className="container" id="container">
+                <div className="form-container sign-in">
                     <form onSubmit={handleLogin}>
-                        <span id='Loginsuggestions'>Usa tu correo electrónico y contraseña para iniciar sesión</span>
-                        {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Cuadro de texto para mensajes de error */}
-                        <input 
-                            type="email" 
-                            placeholder="Correo Electrónico" 
-                            value={email} 
-                            onChange={e => setEmail(e.target.value)} 
+                        <span id="Loginsuggestions">{t('login.title')}</span>
+                        {errorMessage && <div className="error-message">{errorMessage}</div>}
+                        <input
+                            type="email"
+                            placeholder={t('login.emailPlaceholder')}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <input 
-                            type="password" 
-                            placeholder="Ingresa tu contraseña" 
-                            value={password} 
-                            onChange={e => setPassword(e.target.value)} 
+                        <input
+                            type="password"
+                            placeholder={t('login.passwordPlaceholder')}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
-                        <button type="submit">Iniciar Sesión</button>
-                        <button 
-                            type="button" 
-                            onClick={() => navigate('/register')} 
+                        <button type="submit">{t('login.loginButton')}</button>
+                        <button
+                            type="button"
+                            onClick={() => navigate('/register')}
                             className="toggle-view"
                         >
-                            Registrarse
+                            {t('login.registerButton')}
                         </button>
                     </form>
                 </div>
+                <div className="oauth-container">
+                    <span>{t('login.googleLogin')}</span>
+                    <button onClick={handleGoogleLogin} className="google-login">
+                        {t('login.googleLogin')}
+                    </button>
+                </div>
             </div>
-            <footer />     
+            <footer />
         </div>
     );
 }

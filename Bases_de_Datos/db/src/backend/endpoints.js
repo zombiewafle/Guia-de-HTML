@@ -97,6 +97,23 @@ app.get('/profile', authenticateToken, (req, res) => {
 });
 
 
+app.put('/users/update', authenticateToken, (req, res) => {
+    const userId = req.user.id;
+    const { email, phone_number } = req.body;
+
+    const sql = 'UPDATE users SET email = ?, phone_number = ? WHERE id = ?';
+
+    db.query(sql, [email, phone_number, userId], (err, results) => {
+        if (err) {
+            console.error("Error al actualizar datos:", err);
+            res.status(500).json({ message: 'Error al actualizar datos' });
+        } else {
+            res.json({ message: 'Datos actualizados correctamente' });
+        }
+    });
+});
+
+
 app.get('/products', (req, res) => {
   const sql = 'SELECT * FROM products';
 
@@ -167,29 +184,6 @@ app.delete('/cart/remove/:productId', authenticateToken, (req, res) => {
 });
 
 
-app.post('/orders', authenticateToken, (req, res) => {
-  const userId = req.user.id;
-  const { paymentId } = req.body;
-
-  const createOrderSQL = `
-      INSERT INTO orders (amount, date, user_id, payment_id)
-      SELECT SUM(p.price * c.quantity), CURDATE(), ?, ? 
-      FROM cart c
-      JOIN products p ON c.product_id = p.id
-      WHERE c.user_id = ?
-  `;
-
-  db.query(createOrderSQL, [userId, paymentId, userId], (err, results) => {
-      if (err) {
-          console.error("Error al crear la orden:", err);
-          res.status(500).json({ message: 'Error al crear la orden' });
-      } else {
-          res.json({ message: 'Orden creada con éxito', orderId: results.insertId });
-      }
-  });
-});
-
-
 app.post('/payments', authenticateToken, (req, res) => {
   const { type_of_payment, amount, status } = req.body;
   const sql = `
@@ -223,9 +217,9 @@ app.get('/users/:userId/addresses', (req, res) => {
 
 app.post('/cart/checkout', authenticateToken, (req, res) => {
     const userId = req.user.id;
-    const { paymentId } = req.body;  // Recibimos el ID del pago en la solicitud
+    const { paymentId } = req.body;  
 
-    // Primero, calculamos el monto total de los productos en el carrito del usuario
+    
     const calculateTotalSQL = `
         SELECT SUM(p.price * c.quantity) AS totalAmount 
         FROM cart c
@@ -295,6 +289,37 @@ app.get('/search', (req, res) => {
     });
 });
 
+
+app.get('/products', (req, res) =>{
+    const { query} = req.query;
+
+    const sql = `
+        SELECT * FROM product_categories
+    `;
+});
+
+
+app.post('/orders', authenticateToken, (req, res) => {
+    const userId = req.user.id;
+    const { paymentId } = req.body;
+  
+    const createOrderSQL = `
+        INSERT INTO orders (amount, date, user_id, payment_id)
+        SELECT SUM(p.price * c.quantity), CURDATE(), ?, ? 
+        FROM cart c
+        JOIN products p ON c.product_id = p.id
+        WHERE c.user_id = ?
+    `;
+  
+    db.query(createOrderSQL, [userId, paymentId, userId], (err, results) => {
+        if (err) {
+            console.error("Error al crear la orden:", err);
+            res.status(500).json({ message: 'Error al crear la orden' });
+        } else {
+            res.json({ message: 'Orden creada con éxito', orderId: results.insertId });
+        }
+    });
+  });
 
 
 

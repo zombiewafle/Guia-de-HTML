@@ -1,0 +1,30 @@
+/* Contenedor del perfil */
+.profile-container {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 300px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Estilo para cada línea de información */
+.profile-container p {
+    margin: 8px 0;
+}
+
+/* Mensaje de error */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}

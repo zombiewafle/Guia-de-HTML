@@ -1,20 +1,18 @@
-// App.js
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './frontend/login';
-// import Home from './components/Home';
-// import NotFound from './components/NotFound';
+import Login from './frontend/login.js';
+import Home from './frontend/home.js';
+import OAuthCallback from './frontend/components/oauth.js';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/login" element={<Login />} />
-        {/* <Route path="*" element={<NotFound />} /> {}  Para manejar rutas no encontradas */}
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/auth/google/callback" element={<OAuthCallback />} /> {}
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

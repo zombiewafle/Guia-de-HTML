@@ -1,0 +1,36 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Tests
+      run: npm test
+
+    - name: Build Application
+      run: npm run build
+
+    - name: Deploy to Server
+      env:
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        scp -r ./build user@$SERVER_IP:/var/www/app
+        ssh -o StrictHostKeyChecking=no user@$SERVER_IP "pm2 reload all"
